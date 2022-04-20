@@ -45,7 +45,7 @@ bind-key M-c "bash -c 'xdotool-center'"
 bind-mouse M-2 window-lower
 bind-mouse M-3 window-resize
 
-command 1280x720 "bash -c 'xrandr-1280x720'"
-command 1920x1200 "bash -c 'xrandr-1920x1200'"
-command 1920x1080 "bash -c 'xrandr-1920x1080'"
+command 1280x720 "bash -c 'xrandr --output Virtual-1 --mode 1280x720'"
+command 1920x1080 "bash -c 'xrandr --output Virtual-1 --mode 1920x1080'"
+command 1920x1200 "bash -c 'xrandr --output Virtual-1 --mode 1920x1200'"
 command zzz "bash -c 'zzz'"
