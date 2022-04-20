@@ -1,0 +1,6 @@
+GIT_WORK_TREE='/home/brian'
+GIT_DIR='/home/brian/.dotfiles'
+
+alias gf="git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE log --follow --"
+alias gh="git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE"
+alias gt="git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE ls-tree --full-tree --name-only -r HEAD"

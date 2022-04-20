@@ -1,0 +1,2 @@
+. ~/.aliases/git
+. ~/.aliases/misc

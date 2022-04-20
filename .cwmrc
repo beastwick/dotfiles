@@ -1,0 +1,51 @@
+gap 5 5 5 5
+ 
+fontname "DejaVuSansMono:pixelsize=18"
+
+color font '#bcbdbc'               
+color selfont '#eeeeec'               
+color menubg '#1c1c1c'               
+color menufg '#215d9c'              
+
+snapdist 30
+
+bind-key CM-Return urxvt
+
+bind-key M-f window-fullscreen
+bind-key M-g window-group
+bind-key M-h window-htile
+bind-key M-m window-maximize
+bind-key M-r window-menu-label
+bind-key M-v window-vtile
+
+bind-key M-1 group-toggle-1
+bind-key M-2 group-toggle-2
+bind-key M-3 group-toggle-3
+bind-key M-4 group-toggle-4
+bind-key M-5 group-toggle-5
+bind-key M-6 group-toggle-6
+bind-key M-7 group-toggle-7
+bind-key M-8 group-toggle-8
+bind-key M-9 group-toggle-9
+
+bind-key MS-1 window-movetogroup-1
+bind-key MS-2 window-movetogroup-2
+bind-key MS-3 window-movetogroup-3
+bind-key MS-4 window-movetogroup-4
+bind-key MS-5 window-movetogroup-5
+bind-key MS-6 window-movetogroup-6
+bind-key MS-7 window-movetogroup-7
+bind-key MS-8 window-movetogroup-8
+bind-key MS-9 window-movetogroup-9
+
+bind-key M-a group-toggle-all
+
+bind-key M-c "bash -c 'xdotool-center'"
+
+bind-mouse M-2 window-lower
+bind-mouse M-3 window-resize
+
+command 1280x720 "bash -c 'xrandr-1280x720'"
+command 1920x1200 "bash -c 'xrandr-1920x1200'"
+command 1920x1080 "bash -c 'xrandr-1920x1080'"
+command zzz "bash -c 'zzz'"
