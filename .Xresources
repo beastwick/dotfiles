@@ -23,6 +23,6 @@ urxvt*background: black
 urxvt*transparent: true
 urxvt*shading: 15
 
-urxvt.font: xft:monospace:size=13
+urxvt.font: xft:DejaVuSansMono:size=12
 
 urxvt.scrollBar: false

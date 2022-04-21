@@ -47,4 +47,5 @@ bind-mouse M-3 window-resize
 
 command 1920x1080 "bash -c 'xrandr --output Virtual-1 --mode 1920x1080'"
 command 1920x1200 "bash -c 'xrandr --output Virtual-1 --mode 1920x1200'"
-command zzz "bash -c 'zzz'"
+command screenshot-focused "bash -c 'screenshot-focused'"
+command screenshot-selection "bash -c 'screenshot-selection'"
