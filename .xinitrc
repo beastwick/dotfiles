@@ -1,2 +1,4 @@
 xrdb -merge .Xresources &
-exec cwm
+feh --randomize --bg-fill /home/brian/pictures/wallpapers/* &
+#exec cwm
+exec awesome

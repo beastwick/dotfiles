@@ -7,7 +7,7 @@ color selfont '#eeeeec'
 color menubg '#1c1c1c'               
 color menufg '#215d9c'              
 
-snapdist 30
+snapdist 20
 
 bind-key CM-Return urxvt
 
@@ -45,7 +45,7 @@ bind-key M-c "bash -c 'xdotool-center'"
 bind-mouse M-2 window-lower
 bind-mouse M-3 window-resize
 
-command 1920x1080 "bash -c 'xrandr --output Virtual-1 --mode 1920x1080'"
-command 1920x1200 "bash -c 'xrandr --output Virtual-1 --mode 1920x1200'"
-command screenshot-focused "bash -c 'screenshot-focused'"
-command screenshot-selection "bash -c 'screenshot-selection'"
+command 1920x1080 "bash -c 'xrandr --output DisplayPort-0 --set \"scaling mode\" \"Full aspect\" --mode 1920x1080'"
+command 1920x1200 "bash -c 'xrandr --output DisplayPort-0 --mode 1920x1200'"
+
+command screenshot-selection "bash -c 'maim -o -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i'"
