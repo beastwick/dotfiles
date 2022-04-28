@@ -13,10 +13,8 @@ bind-key CM-Return urxvt
 
 bind-key M-f window-fullscreen
 bind-key M-g window-group
-#bind-key M-h window-htile
 bind-key M-m window-maximize
 bind-key M-r window-menu-label
-#bind-key M-v window-vtile
 
 bind-key M-1 group-toggle-1
 bind-key M-2 group-toggle-2
@@ -40,18 +38,18 @@ bind-key MS-9 window-movetogroup-9
 
 bind-key M-a group-toggle-all
 
-bind-key M-c "bash -c 'xdotool-center'"
-bind-key M-h "bash -c 'xdotool-left'"
-bind-key M-j "bash -c 'xdotool-top'"
-bind-key M-k "bash -c 'xdotool-bottom'"
-bind-key M-l "bash -c 'xdotool-right'"
+bind-key M-c "bash -c 'xdotool-move center'"
+bind-key M-h "bash -c 'xdotool-tile left'"
+bind-key M-j "bash -c 'xdotool-tile top'"
+bind-key M-k "bash -c 'xdotool-tile bottom'"
+bind-key M-l "bash -c 'xdotool-tile right'"
 
 bind-mouse M-2 window-lower
 bind-mouse M-3 window-resize
 
-command 1920x1080 "bash -c 'xrandr --output DisplayPort-0 --set \"scaling mode\" \"Full aspect\" --mode 1920x1080'"
-command 1920x1200 "bash -c 'xrandr --output DisplayPort-0 --mode 1920x1200'"
+command 1920x1080 "bash -c 'xrandr-mode 1920x1080"
+command 1920x1200 "bash -c 'xrandr-mode 1920x1200"
 
-command screenshot-selection "bash -c 'maim -o -s --format=png /dev/stdout | xclip -selection clipboard -t image/png -i'"
+command screenshot-selection "bash -c 'screenshot selection'"
 
 #command zzz "bash -c 'systemctl suspend'"

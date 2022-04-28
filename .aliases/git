@@ -1,5 +1,5 @@
-GIT_WORK_TREE='/home/brian'
-GIT_DIR='/home/brian/.dotfiles'
+GIT_WORK_TREE=$HOME
+GIT_DIR=$HOME/.dotfiles
 
 alias gf="git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE log --follow --"
 alias gh="git --git-dir=$GIT_DIR --work-tree=$GIT_WORK_TREE"
