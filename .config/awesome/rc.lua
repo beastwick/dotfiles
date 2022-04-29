@@ -175,7 +175,7 @@ local tasklist_buttons = gears.table.join(
 	end),
 
 	awful.button({}, 3, function()
-		awful.menu.client_list({ theme = { width = 250 } })
+		awful.menu.client_list({ theme = { width = 350 } })
 	end),
 
 	awful.button({}, 4, function()
@@ -387,7 +387,7 @@ root.buttons(gears.table.join(
   end),
 
 	awful.button({}, 3, function()
-    awful.menu.client_list({ theme = { width = 250 } })
+    awful.menu.client_list({ theme = { width = 350 } })
   end),
 
   awful.button({}, 4, awful.tag.viewnext),
@@ -508,8 +508,8 @@ globalkeys = gears.table.join(
 		myscreen.mywibox.visible = not myscreen.mywibox.visible
 	end, { description = "toggle statusbar", group = "awesome" }),
 
-	awful.key({ modkey, "Shift" }, "r", rename_client, { description = "rename the selected client", group = "client" }),
-	awful.key({ modkey }, "r", rename_tag, { description = "rename the selected tag", group = "tag" }),
+	awful.key({ modkey }, "r", rename_client, { description = "rename the selected client", group = "client" }),
+	awful.key({ modkey, "Shift" }, "r", rename_tag, { description = "rename the selected tag", group = "tag" }),
 
 	awful.key({ modkey }, "'", function()
 		show_tags()
