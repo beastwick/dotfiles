@@ -202,11 +202,11 @@ local function set_wallpaper(s)
 end
 
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
-screen.connect_signal("property::geometry", set_wallpaper)
+screen.connect_signal("property::geometry", function() end) -- set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
 	-- Wallpaper
-	set_wallpaper(s)
+	-- set_wallpaper(s)
 
 	chars = "1234567890qwertyuiopasdfghjklzxcvbnm"
 	tags = {}
@@ -368,7 +368,9 @@ local function show_tags()
 		end
 	end
 
-	awful.menu({ items = tags_list }):show()
+	menu = awful.menu({ items = tags_list })
+  menu:show()
+  return menu
 end
 
 local instance = nil
@@ -377,12 +379,18 @@ local instance = nil
 root.buttons(gears.table.join(
 	awful.button({}, 1, function()
     instance = nil
-  	instance = show_tags_clients(instance) 	
+  	instance = show_tags(instance) 	
 	end, function() 
-    instance:hide()
+    if instance then
+      instance:hide()
+    end
   end),
 
-	awful.button({}, 4, awful.tag.viewnext),
+	awful.button({}, 3, function()
+    awful.menu.client_list({ theme = { width = 250 } })
+  end),
+
+  awful.button({}, 4, awful.tag.viewnext),
 	awful.button({}, 5, awful.tag.viewprev)
 ))
 -- }}}
@@ -785,5 +793,5 @@ client.connect_signal("unfocus", function(c)
 end)
 -- }}}
 
-beautiful.useless_gap = 3 
+beautiful.useless_gap = 1 
 beautiful.gap_single_client = true
